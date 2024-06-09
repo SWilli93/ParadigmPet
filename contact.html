@@ -3,93 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>North Carolina</title>
+    <link rel="stylesheet" href="/style.css">
+    <title>Consultations</title>
 </head>
-<body class="contact-body">
-    <img src="images/north-carolina.jpeg" alt="Map of North Carolina">
-    <!-- <header class="contact-header">
-    </header> -->
+<body class="consultation-body">
+    <header class="header">
+        <img src="/images/logo.png" alt="Paradigm Pet Professionals" class="header-img">
+        <h1 class="header-title">Paradigm Pet Professionals</h1>
+    </header>
+    
     <nav class="nav">
-        <ul>
-            <li><a href="contact.html">New Form</a></li>
-            <li><a href="index.html">Home</a></li>
+        <ul class="primary-nav">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html/#about">About Us</a></li>
+            <li><a href="/index.html/#services">Services</a></li>
+            <li><a href="/contact.html">Consultations</a></li>
+        </ul>
+        <ul class="secondary-nav">
+            <li><a href="/pages/animals/Cats.html">Cat page</a></li>
+            <li><a href="/pages/animals/Dogs.html">Dog page</a></li>
+            <li><a href="/pages/animals/Fish.html">Fish page</a></li>
+            <li><a href="">Other pages</a></li>
         </ul>
     </nav>
-    <main class="main-contact">
-        
-        <section class="contact">
+    <main class="consultation-main">
+        <div class="image-container">
+            <img src="/images/boardroom.png" alt="Picture of a meeting in a boardroom" class="left-image">
+        </div>
+        <section class="consultation-section">
             <form>
-                <h1>Contact Us or Leave Us a Review</h1>
-                <div class="contact-form-group-row">
-                    <div class="contact-form-group">
+                <h1 class="consult-h1">Sign up:</h1>
+                <div class="consultation-form-group-row">
+                    <div class="consultation-form-group">
                         <input type="text" id="first-name" placeholder="Your First Name">
                     </div>
-                    <div class="contact-form-group">
+                    <div class="consultation-form-group">
                         <input type="text" id="last-name" placeholder="Your Last Name" required>
                     </div>
                 </div>
-                <div class="contact-form-group">
+                <div class="consultation-form-group">
+                    <input type="tel" id="phone number" placeholder="Your Phone Number" required>
+                </div>
+                <div class="consultation-form-group">
                     <input type="email" id="email1" placeholder="Your Email" required>
                 </div>
-                <div class="contact-form-group">
+                <div class="consultation-form-group">
                     <input type="email" id="email2" placeholder="Confirm Your Email" required>
                 </div>
-                <div class="contact-form-group">
-                    <textarea id="contact-message" rows="10" placeholder="Please provide a brief message"></textarea>
+                <div class="consultation-form-group">
+                    <input type="text" id="pet-name" placeholder="Your Pet's Name">
                 </div>
-                <div class="contact-form-group">
-                    
-                    <button type="submit" value="click" onclick="verify()">Submit</button>
+                <div class="consultation-form-group">
+                    <input type="text" id="pet-type" placeholder="What breed is your pet">
+                </div>
+                <div class="consultation-form-group">
+                    <input type="number" id="pet age" placeholder="How old is your pet">
+                </div>
+                <div class="consultation-form-group">
+                    <button type="submit" value="click" ">Submit</button>
                 </div>
             </form>
         </section>
     </main>
     <footer id="footer">
-        
         <div class="footer-container">
             <div class="footer-row">
                 <div class="footer-col">
                     <h5 class="footer-h5">Quick Nav</h5>
                     <ul class="footer-ul">
-                        <li><a href="#nav">Back to Top</a></li>
-                        <li><a href="/contact.html">Contact Us</a></li>
-                        
+                        <li><a href="#top">Back to Top</a></li>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/contact.html">Consultations</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h5 class="footer-h5">Follow Me</h5>
+                    <h5 class="footer-h5">Follow us</h5>
                     <ul class="footer-ul">
-                        <li><a href="https://github.com/SWilli93" target="_blank">Github</a></li>
-                        <li><a href="https://www.linkedin.com/in/marathoncode/" target="_blank">LinkedIn</a></li>
+                        <li><a href="" target="_blank">Twitter</a></li>
+                        <li><a href="" target="_blank">Instagram</a></li>
+                        <li><a href="" target="_blank">Facebook</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h5 class="footer-h5">More Information</h5>
+                    <h5 class="footer-h5">Pet pages</h5>
                     <ul class="footer-ul">
-                        <li><a href="https://www.nc.gov/" target="_blank">Learn More</a></li>
-                        <li><a href="https://www.nc.gov/exploring" target="_blank">Fun Things to Do</a></li>
+                        <li><a href="/pages/animals/Cats.html">Cats</a></li>
+                        <li><a href="/pages/animals/Dogs.html">Dogs</a></li>
+                        <li><a href="/pages/animals/Fish.html">Fish</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-    <script>
-
-        const button = document.querySelector("button")
-
-        button.addEventListener("click", verify, false)
-
-        function verify(event){
-
-            console.log(`email1: ${email1.value}: Email2: ${email2.value}`);
-
-            if(document.getElementById("email1").checkValidity() == false || document.getElementById("email1").value !== document.getElementById("email2").value) {
-                event.preventDefault();
-                document.getElementById("email1").style.border = "3px solid red";
-                document.getElementById("email2").style.border = "3px solid red";
-            } 
-        }
-    </script>
 </body>
 </html>
