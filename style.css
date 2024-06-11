@@ -140,7 +140,8 @@ main {
     height: 50vh;
     margin: auto;
     background: #6699CC;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    padding: 10px;
 }
 
 .image-card {
@@ -253,6 +254,7 @@ main {
 @media (max-width: 768px) {
     #animal-cards {
         height: auto;
+        flex-wrap: wrap;
     }
 
     .testimonial-card {
